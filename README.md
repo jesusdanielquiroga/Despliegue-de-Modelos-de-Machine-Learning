@@ -71,7 +71,7 @@ El framework <a href="https://github.com/aws-solutions/mlops-workload-orchestrat
 
 # Patrones de diseño para model serving
 
-![architecture-option-1](https://user-images.githubusercontent.com/87950040/202931523-e409310b-11ac-4a87-807a-574289991a4b.png)
+<img width="592" alt="Captura de pantalla 2022-11-20 180723" src="https://user-images.githubusercontent.com/87950040/202931560-a6fdf77f-f803-4543-85e2-17661f205bfc.png">
 
 * Model-as-Service (será el que implementaremos en el curso): El modelo es un servicio que puede ser visitado por una request (por ejemplo vía protocolo http)
 
