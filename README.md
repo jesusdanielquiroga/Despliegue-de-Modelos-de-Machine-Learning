@@ -19,6 +19,8 @@
 
 * [Historia de los MLOps](#historia-de-los-MLOps)
 
+* [Flujo de vida de un modelo en producción](#flujo-de-vida-de-un-modelo-en-producción)
+
 # ¿Qué es el despliegue de modelos?
 
 Definiremos el despliegue de modelos como la transformación de un modelo en producto que puede ser utilizado como servicio por un tercero.
@@ -39,3 +41,13 @@ e ingeniería de software para diseñar y construir sistemas complejos para que 
 A principios de la década de 2000, cuando las empresas necesitaban implementar soluciones de aprendizaje automático, usaban el software con licencia de los proveedores, como SAS, SPSS y FICO. Con el auge del software de código abierto y la disponibilidad de datos, más profesionales de software comenzaron a usar bibliotecas Python o R para entrenar modelos ML. Sin embargo, el uso de los modelos en producción seguía siendo un problema. A medida que iba surgiendo la tecnología de contenerización, se resolvió el despliegue del modelo de forma escalable mediante el uso de contenedores Docker y Kubernetes. Recientemente, vemos la evolución de esas soluciones hacia plataformas de implementación de ML que cubren toda la iteración de experimentación, capacitación, implementación y monitoreo de modelos. La siguiente Figura visualiza la evolución de los MLOps.
 
 ![mlops-evolution](https://user-images.githubusercontent.com/87950040/202930485-46580050-e940-49e9-836b-e8358475a991.jpg)
+
+# Flujo de vida de un modelo en producción
+
+Una descripción general del flujo de trabajo de aprendizaje automático de extremo a extremo, <a href="https://ml-ops.org/content/end-to-end-ml-workflow">más información...</a>
+
+![ml-engineering](https://user-images.githubusercontent.com/87950040/202930891-acbc3c1d-ee76-429c-9a3c-ecdb2ea00a00.jpg)
+
+El framework <a href="https://github.com/aws-solutions/mlops-workload-orchestrator">aws-mlops</a> puede usarse para trabajar también este tipo de operaciones:
+
+![architecture-option-1](https://user-images.githubusercontent.com/87950040/202930964-1f7a0f58-f2a2-47d3-9225-ef053db6c9d7.png)
