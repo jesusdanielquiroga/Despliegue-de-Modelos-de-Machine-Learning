@@ -21,6 +21,8 @@
 
 * [Flujo de vida de un modelo en producción](#flujo-de-vida-de-un-modelo-en-producción)
 
+* [Requerimientos para poder hacer MLOps](#requerimientos-para-poder-hacer-MLOps)
+
 # ¿Qué es el despliegue de modelos?
 
 Definiremos el despliegue de modelos como la transformación de un modelo en producto que puede ser utilizado como servicio por un tercero.
@@ -51,3 +53,16 @@ Una descripción general del flujo de trabajo de aprendizaje automático de extr
 El framework <a href="https://github.com/aws-solutions/mlops-workload-orchestrator">aws-mlops</a> puede usarse para trabajar también este tipo de operaciones:
 
 ![architecture-option-1](https://user-images.githubusercontent.com/87950040/202930964-1f7a0f58-f2a2-47d3-9225-ef053db6c9d7.png)
+
+# Requerimientos para poder hacer MLOps
+
+* Ingeniería de datos
+  * Ingesta de datos
+  * Manejo de datos
+* Machine Learning Pipelines
+  * Entrenamiento de modelo
+  * Evaluación de modelo
+  * Empaquetado y serialización de modelo
+* Deployment Pipelines
+  * Servicio de modelo
+  * Monitoreo del rendimiento del modelo
