@@ -11,3 +11,13 @@
 
 # Despliegue de Modelos de Machine Learning
 
+# Índice
+
+* [Índice](#índice)
+
+* [¿Qué es el despliegue de modelos?](#¿qué-es-el-despliegue-de-modelos?)
+
+# ¿Qué es el despliegue de modelos?
+
+Definiremos el despliegue de modelos como la transformación de un modelo en producto que puede ser utilizado como servicio por un tercero.
+
