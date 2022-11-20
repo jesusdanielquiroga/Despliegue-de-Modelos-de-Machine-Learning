@@ -4,7 +4,7 @@
    <img src="https://img.shields.io/github/forks/jesusdanielquiroga/Despliegue-de-Modelos-de-Machine-Learning">
    <img src="https://img.shields.io/github/forks/jesusdanielquiroga/Despliegue-de-Modelos-de-Machine-Learning">
    <img src="https://img.shields.io/github/license/jesusdanielquiroga/Despliegue-de-Modelos-de-Machine-Learning">
-<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fjesusdanielquiroga%2FIntroduccion-Base-de-Datos"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fjdquiroga2410"></a>
+<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fjesusdanielquiroga%2FDespliegue-de-Modelos-de-Machine-Learning"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fjdquiroga2410"></a>
    <img src="https://img.shields.io/github/stars/camilafernanda?style=social">
    <img src="https://img.shields.io/badge/topic-machinelearning-red">
   </p>
@@ -22,6 +22,8 @@
 * [Flujo de vida de un modelo en producción](#flujo-de-vida-de-un-modelo-en-producción)
 
 * [Requerimientos para poder hacer MLOps](#requerimientos-para-poder-hacer-MLOps)
+
+* [Patrones de diseño para model serving](#patrones-de-diseño-para-model-serving)
 
 # ¿Qué es el despliegue de modelos?
 
@@ -66,3 +68,19 @@ El framework <a href="https://github.com/aws-solutions/mlops-workload-orchestrat
 * Deployment Pipelines
   * Servicio de modelo
   * Monitoreo del rendimiento del modelo
+
+# Patrones de diseño para model serving
+
+![architecture-option-1](https://user-images.githubusercontent.com/87950040/202931523-e409310b-11ac-4a87-807a-574289991a4b.png)
+
+* Model-as-Service (será el que implementaremos en el curso): El modelo es un servicio que puede ser visitado por una request (por ejemplo vía protocolo http)
+
+* Model-as-Depenency: El modelo está incrustado dentro de la dependencia que se está utilizando en la aplicación. Por lo que podría ser consumido llamando al atributo predict() y tener la inferencia
+
+* Precompute Serving Pattern: El modelo ya existe y hace predicciones. Esas predicciones serán guardadas en bases de datos que serán visitadas con posterioridad
+
+* Model-on-Demand: Se utiliza para arquitecturas en streaming. Tenemos el message broker que es el encargado del flujo entre envía los inputs para las predicciones desde los datos, y envía las predicciones hechas por el modelo al servicio que lo requiera.
+
+* Federated Learning (o Hybrid Learning): Es un grupo de modelos. Se asigna un modelo por cada usuario que utilicé la aplicación, y sus datos son los que entrenarán al modelo que luego hará predicciones.
+
+
