@@ -1,0 +1,6 @@
+[core]
+    remote = model-track
+['remote "dataset-track"']
+    url = https://console.cloud.google.com/model-dataset-tracker/dataset
+['remote "model-track"']
+    url = https://console.cloud.google.com/model-dataset-tracker/model
