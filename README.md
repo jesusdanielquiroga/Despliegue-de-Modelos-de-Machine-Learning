@@ -84,3 +84,5 @@ El framework <a href="https://github.com/aws-solutions/mlops-workload-orchestrat
 * Federated Learning (o Hybrid Learning): Es un grupo de modelos. Se asigna un modelo por cada usuario que utilicé la aplicación, y sus datos son los que entrenarán al modelo que luego hará predicciones.
 
 
+---------------------------------------------------------------------------------------------------------------------
+https://iterative.ai/blog/aws-remotes-in-dvc
