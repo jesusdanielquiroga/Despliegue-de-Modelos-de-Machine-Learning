@@ -16,7 +16,8 @@ jobs:
       - name: Installing dependencies
         run: |
           pip install --upgrade pip setuptools wheel
-          
+          pip install testresources
+          pip install python-dev-tools
           pip install dvc[gs]
           pip install -r requirements_test.txt
       - name: Test API
